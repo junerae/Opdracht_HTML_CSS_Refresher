@@ -1,0 +1,269 @@
+
+/* For mobile phones: */
+
+body {
+    font-family: helvetica, sans-serif;
+    color: black;
+}
+
+
+h1 {
+    font-size: 55px;
+    color: black;
+}
+
+
+.container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr 4fr 1fr;
+}
+
+
+header {
+    text-align: center;
+}
+
+
+main {
+    background-color: white;
+    text-align: center;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    color: black;
+}
+
+
+.single-card {
+    border: 1px solid darkgrey;
+    width: 25%;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+
+.single-card p{
+    padding: 20px;
+    text-align: left;
+}
+
+
+.profile {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    "title picture"
+    "subtitle picture";
+    text-align: left;
+}
+
+
+.profile h2 {
+    grid-area: title;
+    font-size: 22px;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+
+.profile p {
+    margin: 20px;
+    font-size: 15px;
+    padding: 0;
+    grid-area: subtitle;
+    margin: 0;
+    color: darkgrey;
+    text-align: left;
+}
+
+
+.img-container {
+    grid-area: picture;
+    text-align: right;
+}
+
+
+.img-container img {
+    max-width: 60%;
+    height: auto;
+    justify-self: right;
+}
+
+
+.cards p {
+    font-size: 15px;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+
+.container-btn {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    border-top: 1px solid lightgray;
+    padding: 20px 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.btn1 {
+    margin: 0;
+    border: 1px solid limegreen;
+    background-color: white;
+    color: limegreen;
+    width: 45%;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 5px 0px 0px 5px; /* top left, top right, bottom right, bottom left */
+}
+
+.btn1 a {
+    text-decoration: none;
+    color: limegreen;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.btn1 a:hover {
+    text-decoration: underline;
+}
+
+
+.btn2 a {
+    text-decoration: none;
+    color: red;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn2 a:hover {
+    text-decoration: underline;
+}
+
+
+.btn2 {
+    margin: 0;
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    width: 45%;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 0px 5px 5px 0px; /* top left, top right, bottom right, bottom left */
+}
+
+
+.widget-area {
+    background-color: rgb(199, 229, 255);
+    text-align: center;
+}
+
+
+footer {
+    background-color: rgb(247, 221, 255);
+    text-align: center;
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+  
+      body {
+          font-family: helvetica, sans-serif;
+          color:  white;
+        }
+      
+      
+      .container {
+          display: grid;
+          grid-gap: 3px;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: 3fr 3fr 2fr 0.5fr;
+          grid-template-areas: 
+          "h h m m m m m m m m m m"
+          "h h m m m m m m m m m m"
+          "h h w w w w w w w w w w"
+          "h h f f f f f f f f f f";
+      }
+
+
+        header {
+            text-align: center;
+            grid-area: h;
+        }
+
+
+        main {
+            background-color: white;
+            text-align: center;
+            grid-area: m;
+        }
+
+/* rgb(199, 229, 255) */
+        .widget-area {
+            background-color: black;
+            text-align: center;
+            grid-area: w;
+        }
+
+
+        footer {
+            background-color: rgb(247, 221, 255);
+            text-align: center;
+            grid-area: f;
+        }
+  
+}
+
+
+
+
+@media only screen and (min-width: 990px) {
+
+/* For extra wide screens: */
+
+        body {
+            font-family: helvetica, sans-serif;
+            color: white;
+        }
+
+
+
+        .container {
+            height: 100%;
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 10fr 10fr 2fr 2fr;
+            grid-template-areas:
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h f f f f f f f f w w";
+        }
+
+}
+        
+
+
